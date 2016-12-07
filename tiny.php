@@ -21,13 +21,13 @@ class Tiny{
         }
         return true;
     }
-    public function convert($toLower = true){
+    public function convert($toUpper = true){
         $call = $this->call;
-        if($toLower){
-            return  mb_strtolower($call['w'],'UTF-8');
-        } else{
+        if($toUpper){
             return mb_strtoupper($call['w'],'UTF-8');
-        }
+        } 
+        return  mb_strtolower($call['w'],'UTF-8');
+
     }
 
 //    public function encode($string, $code = 'utf-8'){

@@ -13,5 +13,17 @@ if(!$thecase->caseCheck()){
     echo json_encode('some parameters are wrong');
     exit;
 }
-echo json_encode(array($get['w'] => $thecase->convert()));
+$case_u = true;
+if($get['case'] === 'u'){
+    $case_u = true;
+} else if($get['case'] === 'l'){
+    $case_u = false;
+}
+echo json_encode(
+    array(
+        $get['w'] => $thecase->convert(
+            $case_u
+        )
+    )
+);
 exit;
