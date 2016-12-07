@@ -21,9 +21,8 @@ if($get['case'] === 'u'){
 }
 echo json_encode(
     array(
-        $get['w'] => $thecase->convert(
-            $case_u
-        )
+        "in" => $get['w'],
+        "out" => $thecase->convert( $case_u )
     )
 );
 exit;
