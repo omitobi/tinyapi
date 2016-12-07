@@ -5,7 +5,8 @@
  * Date: 7.12.16
  * Time: 10:52
  */
-
+header('Content-type: application/json');
+header('Access-Control-Allow-Origin: *');
 class Tiny{
     private $call;
     public function __construct($call)
