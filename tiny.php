@@ -23,9 +23,17 @@ class Tiny{
     public function convert($toLower = true){
         $call = $this->call;
         if($toLower){
-            return strtolower($call['w']);
+            return  mb_strtolower($call['w'],'UTF-8');
         } else{
-            return strtoupper($call['w']);
+            return mb_strtoupper($call['w'],'UTF-8');
         }
     }
+
+//    public function encode($string, $code = 'utf-8'){
+//        if($code === 'utf-8'){
+//            mb_strtolower($string,'UTF-8');
+////            return utf8_encode($string);
+//        }
+//        return utf8_encode($string);
+//    }
 }
