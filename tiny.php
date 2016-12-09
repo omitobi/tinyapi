@@ -27,7 +27,8 @@ class Tiny{
         if($case === 'u'){
             return mb_strtoupper($call['w'],'UTF-8');
         }else if($case === 'm'){
-            return ucwords($call['w']);
+            return mb_convert_case($call['w'], MB_CASE_TITLE, "UTF-8");
+//            return ucwords($call['w'],'UTF-8');
         }
         return  mb_strtolower($call['w'],'UTF-8');
     }
