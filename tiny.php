@@ -16,7 +16,7 @@ class Tiny{
 
     public function caseCheck(){
         $callKeys = array_keys($this->call);
-        if(!in_array('case', $callKeys) || !in_array('w', $callKeys)){
+        if(!in_array('w', $callKeys)){
             return false;
         }
         return true;
