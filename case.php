@@ -5,6 +5,7 @@
  * Date: 7.12.16
  * Time: 10:51
  */
+header('Content-type: application/json');
 require_once 'tiny.php';
 $get = $_GET;
 
